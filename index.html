@@ -3,18 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethio Corporate Bot</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ethio Corporate - Legal Advisory Services</title>
+    <style>
+        :root {
+            --primary-color: #2A5C82; /* Dark blue - adjust to match logo */
+            --secondary-color: #E8B839; /* Gold accent - adjust to match logo */
+            --text-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        header {
+            background: white;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            height: 60px; /* Adjust based on your logo */
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(42,92,130,0.9), rgba(42,92,130,0.9)),
+                        url('law-bg.jpg');
+            background-size: cover;
+            color: white;
+            padding: 120px 5% 80px;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 5%;
+            background: #f9f9f9;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Bot Integration Section */
+        .bot-cta {
+            text-align: center;
+            padding: 3rem 5%;
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 5%;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <img src="logo.png" alt="Ethio Corporate Logo" class="logo">
-        <div class="bot-container">
-            <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+    <header>
+        <img src="ethio-corporate-logo.png" alt="Ethio Corporate Logo" class="logo">
+    </header>
 
-<script src="https://files.bpcontent.cloud/2025/03/02/17/20250302174517-92A1406M.js"></script>
-            <p>Bot will appear here once the script is added.</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Expert Corporate Legal Guidance in Ethiopia</h1>
+            <p>Navigating Ethiopia's Business Legislation with Confidence</p>
+            <a href="#services" class="cta-button">Explore Services</a>
         </div>
-    </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Legal Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Company Registration</h3>
+                <p>Full assistance with business incorporation and licensing</p>
+            </div>
+            <!-- Add more service cards -->
+        </div>
+    </section>
+
+    <section class="bot-cta">
+        <h2>Instant Legal Assistance</h2>
+        <p>Chat with our AI Legal Assistant for quick guidance</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Ethio Corporate. All rights reserved.</p>
+    </footer>
+
+    <!-- BotPress Integration -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/03/02/17/20250302174517-92A1406M.js"></script>
 </body>
 </html>
