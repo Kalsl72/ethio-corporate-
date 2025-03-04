@@ -1,13 +1,38 @@
 :root {
-    --primary-color: #2A5C82; /* Main logo color */
-    --secondary-color: #E8B839; /* Accent color from logo */
+    --primary-color: #2A5C82;
+    --secondary-color: #E8B839;
+    --text-color: #333333;
 }
-/* Add to existing header styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* ======= HEADER & NAVIGATION ======= */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: white;
     padding: 1rem 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
 }
 
 .main-nav {
@@ -26,9 +51,72 @@ header {
     color: var(--secondary-color);
 }
 
-/* Optional: Mobile-responsive menu */
+/* ======= HERO SECTION ======= */
+.hero {
+    background: linear-gradient(rgba(42,92,130,0.9), rgba(42,92,130,0.9)),
+                url('law-bg.jpg');
+    background-size: cover;
+    color: white;
+    padding: 120px 5% 80px;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ======= SERVICES SECTION ======= */
+.services {
+    padding: 4rem 5%;
+    background: #f9f9f9;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ======= BOT CTA SECTION ======= */
+.bot-cta {
+    text-align: center;
+    padding: 3rem 5%;
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* ======= FOOTER ======= */
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
     .main-nav {
         gap: 1rem;
+    }
+    
+    .logo {
+        height: 50px;
     }
 }
