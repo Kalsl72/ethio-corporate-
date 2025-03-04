@@ -2,3 +2,33 @@
     --primary-color: #2A5C82; /* Main logo color */
     --secondary-color: #E8B839; /* Accent color from logo */
 }
+/* Add to existing header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Optional: Mobile-responsive menu */
+@media (max-width: 768px) {
+    .main-nav {
+        gap: 1rem;
+    }
+}
